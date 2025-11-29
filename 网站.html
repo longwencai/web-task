@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geek招新网站</title>
+    <style>
+    
+    .daohang{
+         background-color: yellow;
+         border-radius: 12px;
+         padding: 12px 21px;
+         display: flex;
+         justify-content: center;
+         gap: 200px;
+         width: calc(100%-10px);
+         margin: 5px auto;
+         position:fixed;
+         opacity: 0.75;
+         z-index: 9999;
+    }
+    .daohang a{
+        font-size: 18px;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 400;
+    }
+
+ 
+    .p1{
+      position: relative;
+      margin:20px 0 50px 0;
+      width: 1200px;
+    }
+
+    @keyframes slightShake {
+      0%, 100% { transform: scale(1.5) rotate(0deg); } /* 初始/结束位置 */
+       25% { transform: scale(1.5) rotate(3deg); }   /* 右偏1.5度（幅度小） */
+       75% { transform: scale(1.5) rotate(-3deg); }  /* 左偏1.5度 */
+    }
+
+    .d2{
+      position: absolute;
+      top:25%;
+      left: 40%;
+      transform-origin: center;
+    }
+  
+    .d2:hover{
+      animation: slightShake 0.6s 1;
+    }
+
+    .p2{
+      width: 1200px;
+      position: relative;
+      display: flex;
+      margin: 0 0 50px 0;
+    }
+
+    .bioati{
+      font-size: 50px;
+      position: absolute;
+      bottom: -10px;
+      left: 38%;
+    }
+  
+     /* 卡片容器：控制整体外观 */
+    .card {
+      width: 1200px; /* 卡片宽度，可自定义 */
+      background: #fff;
+      border: 5px solid #e0e0e0; /* 浅灰色边框 */
+      border-radius: 12px; /* 圆角，和原图一致 */
+      padding: 20px;
+      display: flex; /* 让文字和图片并排 */
+      gap: 20px; /* 文字和图片的间距 */
+      align-items: flex-start; /* 顶部对齐 */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* 轻微阴影，增强层次感 */
+      margin: 0 0 50px 0;
+    }
+    /* 文字区域样式 */
+    .card-text {
+      flex: 1; /* 文字区域占满剩余宽度 */
+    }
+    .card-title {
+      font-size: 30px;
+      font-weight: bold;
+      color: #333;
+      margin: 0 0 10px 0;
+    }
+    .card-slogan {
+      font-size: 28px;
+      color: #007bff; /* 蓝色标语，和原图一致 */
+      margin: 0 0 15px 0;
+    }
+    .card-desc {
+      font-size: 20px;
+      color: #666;
+      line-height: 1.6;
+      margin: 0;
+    }
+    /* 图片区域样式 */
+    .card-img {
+      width: 200px; /* 图片宽度 */
+      height: auto;
+    }
+
+     @keyframes  sheji1{
+      0%, 100% { transform: scale(1.1) rotate(0deg); } /* 初始/结束位置 */
+       25% { transform: scale(1.1) rotate(1.2deg); }   /* 右偏1.5度（幅度小） */
+       75% { transform: scale(1.1) rotate(-1.2deg); }  /* 左偏1.5度 */
+    }
+
+    .card:hover{
+     animation: sheji1 0.6s 1;
+    }
+    .card-img:hover{
+      animation: sheji1 0.6s 1;
+    }
+
+       /* 卡片容器 */
+        .pm-card {
+            width: 1192px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            border: 5px solid #e0e0e0; /* 浅灰色边框 */
+            padding: 24px;
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            margin: 0 0 50px 0;
+        }
+
+        /* 左侧插图区域 */
+        .card-img {
+            flex-shrink: 0; /* 防止插图被压缩 */
+        }
+        .card-img img {
+            width: 220px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* 右侧内容区域 */
+        .card-content {
+            flex-grow: 1; /* 让内容区域占满剩余宽度 */
+        }
+        .card-content h2 {
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+            color: #333333;
+        }
+        .card-content .quote {
+            font-size: 28px;
+            color: #e24598;
+            margin: 0 0 20px 0;
+            line-height: 1.5;
+        }
+        .card-content .desc {
+            font-size: 20px;
+            color: #555555;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .pm-card:hover{
+           animation: sheji1 0.6s 1;
+        }
+
+        /* 卡片通用样式 */
+        .game-card {
+            width: 1192px;
+            background-color: #ffffff;
+            border-radius: 16px;
+             border: 5px solid #e0e0e0; /* 浅灰色边框 */
+            padding: 24px;
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            margin: 0 0 50px 0;
+      
+        }
+
+        /* 卡片标题 */
+        .card-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+            color: #333;
+        }
+
+        /* 卡片引用文本 */
+        .card-quote {
+            font-size: 28px;
+            margin: 0 0 20px 0;
+            line-height: 1.5;
+        }
+        /* 游戏开发卡片的引用文本颜色 */
+        .dev-card .card-quote {
+            color: #42b983;
+        }
+        /* 游戏美术卡片的引用文本颜色 */
+        .art-card .card-quote {
+            color: #e24598;
+        }
+
+        /* 卡片描述文本 */
+        .card-desc {
+            font-size: 20px;
+            color: #555;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* 卡片插图区域 */
+        .card-img {
+            flex-shrink: 0;
+            width: 220px;
+            height: auto;
+        }
+        /* 游戏开发卡片的插图（右侧） */
+        .dev-card .card-img {
+            order: 2; /* 让插图显示在右侧 */
+        }
+    
+       .game-card:hover{
+         animation: sheji1 0.6s 1;
+       }
+      
+        /* 外层容器（带装饰边框） */
+        .about-container {
+            width:1160px;
+            padding: 40px;
+            background-color: #fff9f0; /* 浅色背景 */
+            border: 5px solid #ccc;
+            position: relative;
+            margin: 60px 0 50px 0;
+        }
+
+          /* 标题样式 */
+        .about-title {
+            font-size: 32px;
+            color: #666;
+            text-align: center;
+            margin: 0 0 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .about-title::after {
+            content: "👥"; /* 人形图标 */
+            font-size: 28px;
+        }
+  /* 卡片容器（Flex排列3个卡片） */
+        .cards-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* 单个卡片样式 */
+        .about-card {
+            width: 30%;
+            padding: 20px;
+            border: 2px solid #a742c5; /* 紫色边框 */
+            border-radius: 8px;
+            background-color: #fff;
+            text-align: center;
+        }
+        .card-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #666;
+            position: relative;
+        }
+        /* 图标装饰（模拟示例中的小元素） */
+        .card-icon::before, .card-icon::after {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #f06;
+        }
+        .card-icon::before { top: 5px; left: 5px; }
+        .card-icon::after { bottom: 5px; right: 5px; background-color: #4cf; }
+
+        .card-title {
+            font-size: 18px;
+            color: #666;
+            margin: 0 0 15px 0;
+        }
+        .card-desc {
+            font-size: 20px;
+            color: #555;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        /* 蝴蝶装饰元素 */
+        .butterfly {
+            position: absolute;
+            bottom: 0.5px;
+            right: 0px;
+            width: 100px;
+            height: auto;
+            opacity: 0.8;
+        }
+        .xiantiao1{
+          position: absolute;
+          top: -30px;
+          right:-50px;
+          width: 250px;
+        }
+        .xiantiao2{
+          transform: scaleX(-1);
+          position: absolute;
+          top: -30px;
+          left:-50px;
+          width: 250px;
+
+        }
+       .butterfly:hover{
+           animation: sheji1 0.6s 1;
+       }
+        .about-card:hover{
+             animation: sheji1 0.6s 1;
+        }
+
+       .container {
+            width:1160px;
+            padding: 40px;
+            border: 5px solid #4CAF50;
+            border-radius: 8px;
+            background: #fff;
+            font-family: Arial, sans-serif;
+            position: relative;
+            margin: 0 0 80px 0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 32px;
+            font-size: 40px;
+        }
+        h1 span {
+            color: #4CAF50;
+        }
+        .requirements {
+            font-size: 20px;
+            line-height: 2;
+            color: #333;
+            margin-bottom: 28px;
+            margin-left: 200px;
+        }
+        .ps {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 30px;
+              margin-left: 150px;
+        }
+        .buttons {
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 0 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        .btn:hover {
+            background: #45a049;
+        }
+
+        .y1{
+          width: 120px;
+          position: absolute;
+          right: -5px;
+          bottom: 0;
+        }
+        .y2{
+          width: 100px;
+          position: absolute;
+          left: 300px;
+          top: 50px;
+        }
+        .y3{
+          width: 100px;
+          position: absolute;
+          left: -20px;
+          bottom: 0;
+        }
+        .y4{
+          width: 400px;
+          position: absolute;
+          right: 70px;
+          bottom: -60px;
+        }
+        .y5{
+            width: 200px;
+          position: absolute;
+          left: -5px;
+          top: -50px;
+  
+        }
+          .questions-section {
+            width:1160px;
+            padding: 40px;
+            background-image: url("images/background_QA.png");
+            background-size: cover;
+            background-position: center;
+            border: 5px solid #4a90e2;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            color: #222;
+            text-shadow: 0 0 2px rgba(255,255,255,0.8);
+            margin: 0 0 50px 0;
+        }
+        .xiao{
+          font-size: 40px;
+        }
+        .questions-section h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+        .question-item {
+            margin: 10px 0;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 25px;
+            font-family: "楷体";
+            background-color: rgba(255,255,255,0.6);
+        }
+        .question-item:hover {
+            background-color: rgba(255,255,255,0.8);
+        }
+        .answer {
+            display: none; /* 默认隐藏回答 */
+            margin-top: 8px;
+            padding: 8px;
+            background-color: rgba(255,255,255,0.9);
+            border-radius: 4px;
+        }
+
+        .picture{
+          display: none;
+          margin-top: 10px;
+          padding: 10px;
+          background-color: #666;
+        }
+    </style>
+</head>
+<body>
+ <div class="daohang">
+   <a href="#inter"><span class="a" id="ma">Introduction</span></a>
+   <a href="#about"><span class="a">About Us</span></a>
+   <a href="https://recruit.new-thread.com" target="_blank"><span class="a">NewThread</span></a>
+   <a href="#contact"><span class="a">Contact Us</span></a>
+   <a href="#qa"><span class="a">Q&A</span></a>
+ </div>
+   
+ <div class="p1">
+    <img src="images\background_Homepage.png" alt="" class="d1" width="1250px" height="auto">  
+    <img src="images\decoration_Geek.png" alt="" width="250px" height="auto" class="d2">
+ </div>
+
+ <div class="p2" id="inter">
+  <img src="images\decoration_Transition.png" alt="" width="1250px" height="auto" class="c1">
+  <h1 class="bioati">Interduction</h1>
+ </div>
+
+ <details>
+    <summary style="font-size: 20px; margin-left: 50%;">招新二维码</summary>
+    <div><img src="images\qrcode_1699620268564.jpg" alt="" style="width: 170px; margin-left: 50%;" ></div>
+ </details>
+
+
+
+<div class="card">
+    <!-- 文字部分 -->
+    <div class="card-text">
+      <h2 class="card-title">开发程序猿</h2>
+      <p class="card-slogan">"Stay Hungry, Stay Foolish"</p >
+      <p class="card-desc">
+        前端：前端开发是创建Web或app视觉界面呈现给用户的过程通过HTML, CSS及JavaScript以及衍生出来的各种技术、框架、解决方案，实现互联网产品的用户界面交互。<br><br>
+        后端：通常也称服务器端开发。不对用户显示,负责处理前端的请求，进行逻辑处理和数据交互。客户端:移动应用开发是为了小型、无线计算设备编写软件的流程和程序的集合，例如智能手机或平板电脑。
+      </p >
+    </div>
+    <!-- 图片部分 -->
+  <img src="images\Geek_Programmer.png" alt="插图" class="card-img" >
+  </div>
+
+   <!-- 产品经理卡片 -->
+    <div class="pm-card">
+        <div class="card-img">
+            <!-- 插图使用在线图片（可替换为本地图片路径） -->
+          <img src="images\Geek_PM.png" alt="">
+        </div>
+        <div class="card-content">
+            <h2>产品经理</h2>
+            <p class="quote">"好的软件的特征是,明明没用过，但总觉得用过似的。"</p >
+            <p class="desc">PM是针对某一项或是某一类的产品进行规划和管理的人员。PM需要拥有缜密的产品逻辑思维，研究用户心理，负责产品的整个生命周期。PM参与产品的UI和交互设计，为设计和开发确定产品原型，能够将产品变得有个性,操作变得舒适简单、自由。PM需要一定的文档能力和沟通能力，能够在团队合作的过程中跟各个角色进行有效沟通。</p >
+        </div>
+    </div>
+
+       <!-- 游戏开发卡片 -->
+    <div class="game-card dev-card">
+        <div class="card-content">
+            <h2 class="card-title">游戏开发</h2>
+            <p class="card-quote">"TECH OTAKUS SAVE THE WORLD"</p >
+            <p class="card-desc">对游戏开发的热爱和追求，使我们相聚于此。涉及计算机图形学的学习，我们使用物理模拟引擎Unity开发我们所追求的世界，一个故事，一个角色，在我们的世界里改变现实，创造新的可能，我们参与，我们改变，我们创造...</p >
+        </div>
+        <div class="card-img">
+          <img src="images\Geek_Game.png" alt="">
+        </div>
+    </div>
+
+    <!-- 游戏美术卡片 -->
+    <div class="game-card art-card">
+        <div class="card-img">
+      <img src="images\Geek_security.png" alt="">
+        </div>
+        <div class="card-content">
+            <h2 class="card-title">游戏美术</h2>
+            <p class="card-quote">"路漫漫其修远兮，非大毅力者不能"</p >
+            <p class="card-desc">通俗的说法是游戏中所能看到的一切画面都属于游戏美术，其中包括了角色、UI、场景、道具、动画、特效等。CG艺术的一个分支：游戏美术。游戏美术是游戏制作的重要部分的，通过各种软件引擎和技术技巧，完成相应的部分游戏制作，各个不同岗位的游戏美术师们通力合作，才能完成一部完整的游戏。</p >
+        </div>
+    </div>
+
+   <div class="about-container" id="about">
+        <!-- 角落装饰（用于底部两个角） -->
+        <div class="corner"></div>
+
+        <!-- 标题 -->
+        <h2 class="about-title">About Us</h2>
+
+        <!-- 卡片容器 -->
+        <div class="cards-wrapper">
+            <!-- 卡片1：Speech -->
+            <div class="about-card">
+               <img src="images\about_Speech.png" alt="" style="width: 100px;" class="card-icon"><!-- 模拟图片图标 -->
+                <p class="card-desc">每周我们会举行一次技术例会，用来汇报我们的学习内容，供成员之间交流学习。</p >
+            </div>
+
+            <!-- 卡片2：Diversity -->
+            <div class="about-card">
+                <img src="images\about_Diversity.png" alt="" style="width: 100px;" class="card-icon"><!-- 模拟六边形图标 -->
+                <p class="card-desc">多元化是我们的特色。在这里，你可以拥有多种方向选择，前后端、安全、AI、产品/设计、游戏等。</p >
+            </div>
+
+            <!-- 卡片3：30+ H -->
+            <div class="about-card">
+                <img src="images\about_Time.png" alt="" style="width: 100px;" class="card-icon"><!-- 模拟时钟图标 -->
+                <p class="card-desc">耐心、毅力是我们必备的品质，每周我们会至少花30小时在实验室中。以保证技术的精进。</p >
+            </div>
+        </div>
+
+        <!-- 蝴蝶装饰 -->
+          <img src="images\decoration_Butterfly.png" alt="" class="butterfly">
+
+          <img src="images\decoration_Decoration.png" alt="" class="xiantiao1">
+          <img src="images\decoration_Decoration.png" alt="" class="xiantiao2">
+    </div>
+
+     <div class="container" id="contact">
+        <h1>Contact Us <span>📞</span></h1>
+        <div class="requirements">
+            <ul>
+                <li>热爱计算机，具有geek精神，喜欢DIY，动手能力较强</li>
+                <li>有编程/算法/硬件基础为佳(有作品可附上)</li>
+                <li>有足够的空余时间，热爱思考，对事物有自己的见解</li>
+            </ul>
+        </div>
+        <div class="ps">
+            ps:非新思路统招只有通过发送邮件自我介绍后，收到邮件回执后才会被允许进群,在读学生,都可邮件到newthread_geek@outlook.com报名加入.(信中需备注个人基本信息以及意向方向,此招新活动为长期招新)
+        </div>  
+        
+        <img src="images\decoration_Tree.png" alt="" class="y1">
+        <img src="images\decoration_Leaves.png" alt="" class="y2">
+        <img src="images\decoration_Ladybug.png" alt="" class="y3">
+        <img src="images\decoration_Chameleon.png" alt="" class="y4">
+        <img src="images\decoration_TreeWithSometing.png" alt="" class="y5">
+
+        <div class="buttons">
+            <a href="#" class="btn">QQ-Group 🔔</a >
+            <a href="#" class="btn">E-mail ✉️</a >
+            <a href="#" class="btn">Github ⚙️</a >
+        </div>
+
+    </div>
+
+     <div class="questions-section" id="qa">
+        <h2 class="xiao">More Questions <span>💬</span></h2>
+        <div class="question-list">
+            <!-- 问题1 -->
+            <div class="question-item">
+                1.什么是Geek(极客)? Geek精神又是什么?
+                <div class="answer">
+                   拥有好奇之心，改变之力，爱钻研，能折腾。
+                </div>
+            </div>
+            <!-- 问题2 -->
+            <div class="question-item">
+                2.招新是安排在什么时间?
+                <div class="answer">
+                  按照惯例，正式招新时间是在9月下旬~10月上旬，不过今年会有一些改动，笔试地 点一般在9号教学楼。 如果想要了解我们，可以加入我们的QQ群，招新具体的安排/变动会在招新群通知。
+                </div>
+            </div>
+            <!-- 问题3 -->
+            <div class="question-item">
+                3.我们有考核吗? 考核流程是怎样的呀?
+                <div class="answer">
+                    嗯...我们一共有一轮笔试和两轮面试。权衡技术、经验和学习能力，第一轮是一些视野性的题目，淘汰率并不高。第二轮单独面试， 根据你的笔试提出技术相关的问题、兴趣爱好、个人看法。最后一轮群面，首先问及时间分 配上的问题，其次也会向你提出各种奇怪的问题。这一轮中许多题目其实并不难，也无标准答案，重在考察同学们在压力下的逻辑思维。全部通过成为预备成员啦。
+
+                </div>
+            </div>
+            <!-- 问题4 -->
+            <div class="question-item">
+                4.考核是怎样的形式?
+                <div class="answer">
+                  在考核期间每人会拥有一位'长者'带你入门，学习技术与知识，交流经验与想法。完成每周的新人任务后再进行一次考核筛选 后就可以成为Geek组正式成员啦！在考核期必须满足每周30个小时在实验室哦,所以考核期也不可以懈怠哦！
+                </div>
+            </div>
+            <!-- 问题5 -->
+            <div class="question-item">
+                5.进入Geek组之后都有什么福利呢?
+                <div class="answer">
+                   一对一的新人指引，每一个成员都有会一个mentor, 带你初入门槛，与你一同成长，组内管理较宽松,在尊重其他人的前提下可以尽情发挥自己的个性。 打破平淡，与同样疯狂的人把疯狂的idea实现，磨砺耐性、培养思维、成就梦想。Lab设备/网络资源充足，闲暇之余也有组织活动。更有许多的故事等你来听~
+                </div>
+            </div>
+            <!-- 问题6 -->
+            <div class="question-item">
+                6.进入团队会影响我的日常学习吗?
+                <div class="answer">
+                 你要知道大学是一个可以自由安排自己学习生活的地方。如果你想在上课之余充实自己、激励自己，最好的方法就是和比自己更优秀的人在一起。团队不缺优秀的 人，而我们也期待同样优秀的你，让我们一起前进！小组里也有不少保研, 考研的前辈们, 大部分都能找到一个平衡点, 而且团队的经历对你日后读研, 工作都大有裨益。
+                </div>
+            </div>
+            <!-- 问题7 -->
+            <div class="question-item">
+                7.老师以及学长学姐们的期望是什么?
+                <div class="answer">
+                我们希望你有很强的自学能力，同时关注新事物、新技术，喜欢挑战，逻辑性强，善于和各种文化的人合作.“每个人都可以做自己想做的事情，每个人的方向不一样。 如果你想做产品或有不错的 idea，那么就可以找志同道合的人一起合作。”
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 给所有问题绑定点击事件
+        const questionItems = document.querySelectorAll('.question-item');
+        questionItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // 切换回答的显示/隐藏
+                const answer = item.querySelector('.answer');
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
